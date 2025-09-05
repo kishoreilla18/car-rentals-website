@@ -1,0 +1,398 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://kit.fontawesome.com/1ad2811ffc.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+            color: #098149 !important;
+            padding-right: 300px;
+            margin-left: 30px;
+        }
+
+        .navbar {
+            margin: 10px;
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333 !important;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .nav-link.active {
+            color: #323434 !important;
+            font-weight: 600;
+            font-size: 21px;
+            margin-right: 58px;
+            text-decoration: none;
+        }
+
+        .btn-outline-success a {
+            text-decoration: none;
+            color: rgb(26, 25, 25);
+        }
+
+        .btn-outline-success:hover a {
+            color: white !important;
+        }
+
+        /* about */
+        #about1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ffffff, #a1dba7);
+
+        }
+
+        .para1 h1 {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .para1 h6 {
+            font-size: 20px;
+        }
+
+        .para2 {
+            padding: 20px;
+        }
+
+        .para2 h1 {
+            font-size: 29px;
+            font-weight: 700;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* footer */
+        #footer1 {
+            display: flex;
+
+            justify-content: space-between;
+            padding: 30px;
+            background-color: black;
+            color: rgb(144, 142, 142);
+        }
+
+        .footerleft {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+        }
+
+        .footerleft p {
+            width: 90%;
+            font-size: 18px;
+        }
+
+        .icons {
+            padding: 15px 0;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: rgb(140, 138, 138);
+            margin-right: 25px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .fa-brands {
+            color: grey;
+        }
+
+        .footerleft span {
+            font-size: 40px;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+            color: #098149 !important;
+            padding-right: 30px;
+        }
+
+        .footerright {
+            flex: 1 1 45%;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .navbar-brand {
+                padding-right: 0;
+                margin-left: 10px;
+                font-size: 24px;
+            }
+
+            .nav-link.active {
+                margin-right: 20px;
+                font-size: 18px;
+            }
+
+            #about1 {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about1 img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .para1 h1 {
+                font-size: 32px;
+            }
+
+            .para1 p {
+                font-size: 18px;
+            }
+
+            .para2 h1 {
+                font-size: 24px;
+            }
+
+            .para2 p {
+                font-size: 18px;
+            }
+
+            .footerleft span {
+                font-size: 30px;
+            }
+
+            .footerleft p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .nav-link {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 16px !important;
+            }
+
+            .para1 h1 {
+                font-size: 26px;
+            }
+
+            .para2 h1 {
+                font-size: 20px;
+            }
+
+            .para2 p {
+                font-size: 16px;
+            }
+
+            .footerleft p {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .icons a {
+                font-size: 14px;
+                margin-right: 15px;
+            }
+        }
+
+        /* breadcrumb */
+        .breadcrumb {
+            font-size: 18px;
+            margin: 10px;
+            padding: 90px 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            width: 100%;
+            background: url('{% static "images/centered_about.png" %}') no-repeat center center;
+            background-size: cover;
+            height: 100px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #198754;
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #201e1e;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .breadcrumb {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}" style="font-size: 30px;">CarRentals</a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url "index" %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'adminlogin' %}">Admin Login</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success" style="margin-right: 15px; font-size: 22px; font-weight: 500;"
+                    type="submit"><a href="{% url 'register' %}"
+                        style="text-decoration: none; color: rgb(26, 25, 25);">Register</a>
+                </button>
+                <button class="btn btn-outline-success" style="margin-right: 20px; font-size: 22px; font-weight: 500;"
+                    type="submit"><a href="{% url 'login' %}" style="text-decoration: none; color: rgb(23, 22, 22);">Login</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="{% url 'index' %}">Home</a> &gt;
+        <span>about</span>
+    </nav>
+    <!-- about -->
+    <section id="about1">
+        <div class="img1">
+            <img src="{% static 'images/aboutcars.png' %}" alt="car" width="680px" height="100%" style="border-radius: 10px;">
+        </div>
+        <div class="para1" style="margin-left: 20px; padding: 20px;">
+            <p
+                style="font-size: 30px; font-weight: 400; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                -About Us-</p>
+            <h1>Best Car Rental</h1>
+            <h1>Company.</h1>
+            <p style="font-size: 22px; font-family: 'Times New Roman', Times, serif;">As the leading car rental service
+                in Kerala, Tamil Nadu and other major cities such as Bangalore and
+                Hyderabad, IndusGo from Indus Motors offers a seamless and convenient experience. Experience the freedom
+                of driving and exploring places at your own pace by choosing from IndusGo’s wide range of self-drive car
+                rental options.</p>
+            <h6><b>Extensive Vehicle Selection</b></h6>
+            <h6><b>Transparent and Competitive Pricing</b></h6>
+        </div>
+    </section>
+    <!--  -->
+    <div class="para2">
+        <h1>Reliable Car Rentals, Affordable Rates </h1>
+        <p style="font-size: 23px; font-weight: 380;">Car Rental is dedicated to delivering constant support,
+            transparent pricing, and personalised rental
+            arrangements to meet your specific needs. Whether arriving at a major airport or exploring different parts
+            of Kerala, Tamil Nadu, Telangana, or Karnataka, our pick-up and drop-off services are available for your
+            convenience. We offer a variety of vehicles to suit different needs, ranging from small hatchbacks to
+            high-end luxury cars. Whether it's for a single day, a week, or a month, we offer customisable rental
+            options to meet specific needs. We are here to support you whether you plan a weekend getaway, take the
+            family on a trip, or even drive to work. </p>
+    </div>
+    <img src="{% static "images/imgss1.png" %}" alt="" width="100%" style="padding: 10px; border-radius: 20px;">
+    <div class="para2">
+        <h1>Self-Drive Car Rental in South India </h1>
+        <p style="font-size: 23px; font-weight: 380;">Explore the freedom of travel with IndusGo, South India’s trusted
+            self-drive car rental service. Offering affordable, flexible car rentals across Kerala, Tamil Nadu,
+            Karnataka, Hyderabad, and beyond, IndusGo lets you choose from a wide range of vehicles tailored to fit your
+            needs and budget. Whether you're exploring cities or the countryside, our self-drive rentals empower you
+            with control and convenience. Delivered straight to your doorstep or available for easy pickup at airports,
+            IndusGo ensures a seamless experience from booking to driving. </p>
+    </div>
+    <div class="para2">
+        <h1>Our Story </h1>
+        <p style="font-size: 23px; font-weight: 380;">Founded with a vision to redefine car rental convenience, IndusGo
+            has been serving customers with reliable, high-quality service since inception. Our journey began with the
+            goal of making car rentals easier and more accessible for travelers and locals alike, enabling thousands to
+            journey independently, safely, and comfortably. Our commitment to customer satisfaction and vehicle quality
+            has made us a leader in the self-drive car rental industry in South India. </p>
+    </div>
+    <div class="para2">
+        <h1>Connect Today</h1>
+        <p style="font-size: 23px; font-weight: 380;">Experience the convenience of self-drive car rentals with IndusGo,
+            trusted by thousands across South India. Whether you’re looking for budget-friendly options or premium
+            vehicles, we’re here to help make every journey memorable. Contact us today or visit our website to book
+            your next ride! </p>
+    </div>
+
+    <!-- footer -->
+    <section id="footer1">
+        <div class="footerleft">
+            <span>Car Rentals</span>
+            <p>Car Rentals is a car sharing platform where you can choose from the widest range of 25,000+ cars & car
+                models. Get access to top rated cars with reviews from verified guests and enjoy self drive with full
+                freedom and privacy.</p>
+            <h2 style="color: rgb(112, 111, 111); font-weight: 800; font-size: 25px;">Social Media Links</h2>
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin </a>
+                <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href=""><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+        <div class="list footerright">
+            <p>Categories</p>
+            <p>Drive Car</p>
+            <p>Featured Article</p>
+            <p>Lifestyle</p>
+            <p>Popular Destinations</p>
+            <p>Self Drive Car</p>
+            <p>Tech Blogs</p>
+            <p>Tips & Tricks</p>
+        </div>
+        <div class="list2 footerright">
+            <p>Car Rentals</p>
+            <p>Explore Places</p>
+            <p>Travel Stories</p>
+            <p>Top Destinations</p>
+            <p>Holiday Ideas</p>
+            <p>Self Drive Offers</p>
+            <p>Travel Guides</p>
+            <p>Adventure Lifestyle</p>
+        </div>
+        <hr>
+    </section>
+    <footer style="display: flex; justify-content: center; color: gray; background-color: black;">©2025 Carrentals Terms
+    </footer>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

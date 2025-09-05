@@ -1,0 +1,512 @@
+body {
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 1100;
+  margin-bottom: 1px;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+}
+
+.navbar-brand {
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #098149 !important;
+  margin-left: 20px;
+  font-size: 30px !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 20px !important;
+    margin-left: 15px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    margin: 5px;
+  }
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333 !important;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #323434 !important;
+  font-weight: 600;
+  font-size: 21px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-link.active {
+    font-size: 18px;
+  }
+  
+  .navbar-nav {
+    margin: 20px 0;
+  }
+}
+
+.navbar .navbar-collapse {
+  justify-content: flex-start;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 24px;
+    margin-left: auto;
+  }
+}
+
+.username {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .username {
+    font-size: 16px;
+    text-align: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .username .btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* home page */
+.hero-section {
+  min-height: 70vh;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #f8f9fa, #9de0a4);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #212121;
+}
+
+.hero-section h3 {
+  font-size: 1.4rem;
+}
+
+.hero-image {
+  width: 80%;
+  max-width: 400px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #212121;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+}
+
+.booking-form {
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 600px;
+}
+
+.booking-form input {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.booking-form button {
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .date-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .booking-form {
+    width: 100%;
+    padding: 20px !important;
+  }
+
+  .booking-form button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .img-fluid {
+    width: 100%;
+  }
+  
+  .hero-image {
+    max-width: 250px;
+  }
+}
+
+/* City Cards */
+.city-card {
+  max-width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px 10px 0px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+}
+
+.city-image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 250px;
+}
+
+.city-image {
+  border-radius: 30px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  max-height: 300px;
+}
+
+.city-content {
+  padding: 30px;
+}
+
+.city-title {
+  font-size: 27px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: #333;
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+
+.city-description {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.6;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  padding: 8px 20px;
+  background: #198754;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #146c43;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .city-card {
+    margin: 15px;
+    padding: 15px 5px 0px 5px;
+  }
+
+  .city-content {
+    padding: 20px;
+  }
+
+  .city-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .city-description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .city-image-container {
+    min-height: 200px;
+    padding: 15px;
+  }
+
+  .city-image {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .city-card {
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .city-content {
+    padding: 15px;
+  }
+
+  .city-title {
+    font-size: 20px;
+  }
+
+  .city-description {
+    font-size: 15px;
+  }
+
+  .city-image-container {
+    min-height: 180px;
+    padding: 10px;
+  }
+}
+
+/* footer */
+#footer1 {
+  padding: 30px;
+  background-color: black;
+  color: rgb(144, 142, 142);
+}
+
+.footerleft {
+  margin-bottom: 20px;
+}
+
+.footerleft p {
+  width: 100%;
+  font-size: 18px;
+}
+
+.icons {
+  padding: 15px 0;
+}
+
+.icons a {
+  text-decoration: none;
+  color: rgb(140, 138, 138);
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.fa-brands {
+  color: grey;
+}
+
+.footerleft span {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #098149 !important;
+  padding-right: 30px;
+}
+
+.footerright {
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  color: rgb(112, 111, 111);
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-category {
+  font-weight: 600;
+  color: #098149;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  #footer1 {
+    padding: 20px 15px;
+  }
+
+  .footerleft span {
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .footerleft p,
+  .footerright p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .icons {
+    text-align: center;
+  }
+
+  .icons a {
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  .footer-category {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerleft span {
+    font-size: 28px;
+  }
+
+  .footer-heading {
+    font-size: 20px;
+  }
+
+  .footerleft p,
+  .footerright p {
+    font-size: 15px;
+  }
+
+  .icons a {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .col-12,
+  .col-md-6,
+  .col-md-12,
+  .col-lg-6,
+  .col-lg-8,
+  .col-lg-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(9, 129, 73, 0.25);
+  border-color: #098149;
+}
+
+/* Hover effects */
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#logoutBtn {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  #logoutBtn {
+    margin-right: 0;
+  }
+}
+

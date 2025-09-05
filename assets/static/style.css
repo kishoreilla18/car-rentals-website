@@ -1,0 +1,298 @@
+body {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+.navbar-brand {
+
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #098149 !important;
+  padding-right: 300px;
+  margin-left: 30px;
+}
+
+.navbar {
+  margin: 10px;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333 !important;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+
+.nav-link.active {
+  color: #323434 !important;
+  font-weight: 600;
+  font-size: 21px;
+  /* border: 1px grey solid;
+  border-radius: 10px; */
+  /* padding: 10px 90px 10px 90px; */
+  /* padding: 10px; */
+  margin-right: 58px;
+  text-decoration: none;
+}
+
+.btn-outline-success a {
+  text-decoration: none;
+  color: rgb(26, 25, 25);
+}
+
+.btn-outline-success:hover a {
+  color: white !important;
+}
+
+/* home page */
+.hero-section {
+  min-height: 70vh;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #f8f9fa, #9de0a4);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #212121;
+}
+
+.hero-section h3 {
+  font-size: 1.4rem;
+}
+
+.booking-form {
+  border: 1px solid #ddd;
+  width: 80%;
+
+}
+
+.booking-form input {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.booking-form button {
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-img {
+  height: 60vh;
+  object-fit: cover;
+  padding: 30px;
+  border-radius: 60px;
+}
+
+#cards {
+  margin: 60px 80px 50px 80px;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
+#bannerimg {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    padding-right: 0;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+
+  .nav-link.active {
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .booking-form {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .card img {
+    height: 350px;
+  }
+
+  .date {
+    flex-direction: column;
+  }
+
+  .date .form-control {
+    width: 100% !important;
+  }
+
+  iframe {
+    max-width: auto;
+  }
+
+  /* Banner Image */
+  #bannerimg {
+    padding: 0px;
+  }
+
+  /* Cards */
+  #cards {
+    margin: 30px 20px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 8px 0;
+  }
+
+}
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  .hero-section h3 {
+    font-size: 1rem;
+  }
+
+  #bannerimg img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  iframe {
+    width: 400px;
+  }
+
+  .btn {
+    font-size: 16px !important;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+.col-md-6 span {
+  font-size: 40px;
+  font-weight: 580;
+  color: #474545;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.col-md-6 h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.icons {
+  padding: 15px;
+}
+
+.icons a {
+  text-decoration: none;
+  color: black;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* footer */
+#footer1 {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 30px;
+  background-color: black;
+  color: rgb(144, 142, 142);
+}
+
+.footerleft {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.footerleft p {
+  width: 90%;
+  font-size: 18px;
+}
+
+.icons {
+  padding: 15px 0;
+}
+
+.icons a {
+  text-decoration: none;
+  color: rgb(140, 138, 138);
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.fa-brands {
+  color: grey;
+}
+
+.footerleft span {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: #098149 !important;
+  padding-right: 30px;
+}
+
+.footerright {
+  flex: 1 1 45%;
+  margin-bottom: 20px;
+}
+
+.subscription h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

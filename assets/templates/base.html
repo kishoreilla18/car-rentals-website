@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{% static "userdashboard.css" %}">
+    <script src="https://kit.fontawesome.com/1ad2811ffc.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'userdashboard' %}">CarRentals</a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'userdashboard' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'feedback' %}">Feedback</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+                <div class="username d-flex align-items-center">
+                    <span class="me-3">Welcome, <strong id="dashUser">User</strong></span>
+                    <button class="btn btn-outline-danger" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock content %}
+    
+    <!-- footer -->
+    <section id="footer1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="footerleft">
+                        <span>Car Rentals</span>
+                        <p>Car Rentals is a car sharing platform where you can choose from the widest range of 25,000+
+                            cars &
+                            car models. Get access to top rated cars with reviews from verified guests and enjoy self
+                            drive with
+                            full freedom and privacy.</p>
+                        <h2 class="footer-heading">
+                            <i class="fa-solid fa-location-dot"></i> Location
+                        </h2>
+                        <p>#2nd Floor, Siris Rd, Near L.B Nagar Metro Station Pillar No, A1662, Snehapuri Colony,
+                            Hyderabad,
+                            Telangana 500074</p>
+                        <h2 class="footer-heading">Social Media Links</h2>
+                        <div class="icons">
+                            <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin </a>
+                            <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                            <a href=""><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footerright">
+                        <p class="footer-category">Categories</p>
+                        <p>Drive Car</p>
+                        <p>Featured Article</p>
+                        <p>Lifestyle</p>
+                        <p>Popular Destinations</p>
+                        <p>Self Drive Car</p>
+                        <p>Tech Blogs</p>
+                        <p>Tips & Tricks</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footerright">
+                        <p class="footer-category">Car Rentals</p>
+                        <p>Explore Places</p>
+                        <p>Travel Stories</p>
+                        <p>Top Destinations</p>
+                        <p>Holiday Ideas</p>
+                        <p>Self Drive Offers</p>
+                        <p>Travel Guides</p>
+                        <p>Adventure Lifestyle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <footer class="text-center py-3" style="color: gray; background-color: black;">
+        ©2025 Carrentals Terms
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const saved = localStorage.getItem('savedUser');
+            if (!saved) {
+                window.location.href = '{% url 'login' %}';
+                return;
+            }
+            const user = JSON.parse(saved);
+            const name = user.username || (user.email ? user.email.split('@')[0] : 'User');
+            const dashUserEl = document.getElementById('dashUser');
+            if (dashUserEl) dashUserEl.textContent = name;
+
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function () {
+                    // localStorage.removeItem('savedUser');
+                    window.location.href = '{% url 'login' %}';
+                });
+            }
+        });
+    </script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
